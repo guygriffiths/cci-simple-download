@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CCI SST Simple Download</title>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
+<style>
+html, body, #map-canvas {
+	height: 90%;
+	width: 90%;
+	margin: 0px;
+	padding: 0px
+}
+</style>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+<script src="js/cci-sst-download.js"></script>
+</head>
+<body>
+	Click the map to set a location, or enter the co-ordinates in the boxes
+	below the map, choose a time range, and click the "Download" button.
+	<div id="map-canvas"></div>
+	<form>
+		Latitude: <input type="text" id="latitude"> <br>
+		Longitude: <input type="text" id="longitude"> <br> Start:
+		<select id="startMonth">
+			<option value="01">January</option>
+			<option value="02">February</option>
+			<option value="03">March</option>
+			<option value="04">April</option>
+			<option value="05">May</option>
+			<option value="06">June</option>
+			<option value="07">July</option>
+			<option value="08">August</option>
+			<option value="09">September</option>
+			<option value="10">October</option>
+			<option value="11">November</option>
+			<option value="12">December</option>
+		</select> <select id="startYear">
+			<option value="1993">1993</option>
+			<option value="1994">1994</option>
+			<option value="1995">1995</option>
+			<option value="1996">1996</option>
+			<option value="1997">1997</option>
+			<option value="1998">1998</option>
+			<option value="1999">1999</option>
+			<option value="2000">2000</option>
+			<option value="2001">2001</option>
+			<option value="2002">2002</option>
+			<option value="2003">2003</option>
+			<option value="2004">2004</option>
+			<option value="2005">2005</option>
+			<option value="2006">2006</option>
+			<option value="2007">2007</option>
+			<option value="2008">2008</option>
+			<option value="2009">2009</option>
+			<option value="2010">2010</option>
+		</select><br> End: <select id="endMonth">
+			<option value="01">January</option>
+			<option value="02">February</option>
+			<option value="03">March</option>
+			<option value="04">April</option>
+			<option value="05">May</option>
+			<option value="06">June</option>
+			<option value="07">July</option>
+			<option value="08">August</option>
+			<option value="09">September</option>
+			<option value="10">October</option>
+			<option value="11">November</option>
+			<option value="12" selected="selected">December</option>
+		</select> <select id="endYear">
+			<option value="1993">1993</option>
+			<option value="1994">1994</option>
+			<option value="1995">1995</option>
+			<option value="1996">1996</option>
+			<option value="1997">1997</option>
+			<option value="1998">1998</option>
+			<option value="1999">1999</option>
+			<option value="2000">2000</option>
+			<option value="2001">2001</option>
+			<option value="2002">2002</option>
+			<option value="2003">2003</option>
+			<option value="2004">2004</option>
+			<option value="2005">2005</option>
+			<option value="2006">2006</option>
+			<option value="2007">2007</option>
+			<option value="2008">2008</option>
+			<option value="2009">2009</option>
+			<option value="2010" selected="selected">2010</option>
+		</select><br>
+		<button onclick="getCsv()" type="button">Download</button>
+	</form>
+	To explore and download the full dataset, click
+	<a href="http://cera.rdg.ac.uk/Godiva.html">here</a>
+</body>
+</html>
